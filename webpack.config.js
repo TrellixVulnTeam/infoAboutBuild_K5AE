@@ -5,22 +5,29 @@ module.exports = {
     context: path.join(__dirname, 'src'),
     entry: './app/',
     output: {
-        filename: 'app.[hash].js'
+        filename: 'bundle.js',
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
     ],
     module: {
-        rules: [{
-            test: /\.js/,
-            loader: 'babel-loader',
-            exclude: /node_modules/,
-        }]
+        rules: [
+            {
+                test: /\.js/,
+                use: ['babel-loader'],
+                exclude: /node_modules/,
+            },
+            {
+                test: /\.scss/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            }
+        ]
     },
     devServer: {
         contentBase: path.join(__dirname, 'src'),
-        hot: true,
         open: true,
+        hot: true,
+        compress: true,
     },
     resolve: {
         extensions: ['*', '.js', '.scss'],

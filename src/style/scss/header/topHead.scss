@@ -1,0 +1,52 @@
+@import '../common/global';
+@import '../common/mixins';
+
+section.topPanel {
+    @include _flex($padd: 20px 5%);
+    background: #E7F8FF;
+    width: inherit;
+
+    > * {
+        margin: 0 2%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav#links {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    ul {
+        @include _flex;
+    }
+
+    li {
+        margin-right: 20px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    a.logo {
+        display: none;
+        width: $sizeLogo;
+        height: $sizeLogo;
+    }
+
+    nav#socialNetwork a {
+        display: block;
+        border-radius: 7px;
+        width: $sizeSocNetwork;
+        height: $sizeSocNetwork;
+        overflow: hidden;
+    }
+
+    button.menu {
+        width: $sizeBtnMenu;
+        height: $sizeBtnMenu;
+    }
+}

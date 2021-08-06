@@ -1,0 +1,13 @@
+@mixin _flex(
+    $status: '',
+    $justifyCont: space-between, 
+    $alignItems: unset, 
+    $direction: row,
+    $padd: 0,
+) {
+    display: flex #{$status};
+    justify-content: $justifyCont;
+    align-items: $alignItems;
+    flex-direction: $direction;
+    padding: $padd;
+}

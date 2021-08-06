@@ -13,13 +13,18 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js/,
+                test: /\.(js)$/,
                 use: ['babel-loader'],
                 exclude: /node_modules/,
             },
             {
-                test: /\.scss/,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                test: /\.(s[ac]ss)$/,
+                use: [
+                    'style-loader', 
+                    'css-loader', 
+                    'sass-loader', 
+                    'resolve-url-loader',
+                ],
             }
         ]
     },
@@ -32,4 +37,5 @@ module.exports = {
     resolve: {
         extensions: ['*', '.js', '.scss'],
     },
+    devtool: 'source-map',
 };

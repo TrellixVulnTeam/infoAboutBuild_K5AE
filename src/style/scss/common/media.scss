@@ -1,0 +1,15 @@
+@import './global';
+@import './mixins';
+
+@media (min-width: $minSize-tabl) {
+    .topPanel {
+        nav,
+        a.logo {
+            display: block !important;
+        }
+    
+        .button {
+            display: none;
+        }
+    }
+}

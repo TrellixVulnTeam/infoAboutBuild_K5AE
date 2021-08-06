@@ -1,52 +1,81 @@
 @import '../common/global';
 @import '../common/mixins';
+@import '../common/extend';
 
 section.topPanel {
-    @include _flex($padd: 20px 5%);
-    background: #E7F8FF;
+    @include _flex($alignItems: center, $padd: 10px 5%);
+    background: $light-blue;
+    border-bottom: 2px solid #89DCFF;
     width: inherit;
 
-    > * {
+    & > * {
         margin: 0 2%;
-    }
-
-    nav {
-        display: none;
-    }
-
-    nav#links {
-        max-width: 400px;
-        width: 100%;
-    }
-
-    ul {
-        @include _flex;
-    }
-
-    li {
-        margin-right: 20px;
-
-        &:last-child {
-            margin: 0;
-        }
     }
 
     a.logo {
         display: none;
         width: $sizeLogo;
-        height: $sizeLogo;
     }
 
-    nav#socialNetwork a {
-        display: block;
-        border-radius: 7px;
-        width: $sizeSocNetwork;
-        height: $sizeSocNetwork;
-        overflow: hidden;
+    a.openProg {
+        @extend %btnOpenPrg;
     }
 
     button.menu {
         width: $sizeBtnMenu;
         height: $sizeBtnMenu;
+    }
+
+    nav {
+        display: none;
+
+        &#socialNetwork li {
+            width: $sizeSocNetwork;
+
+            img {
+                border-radius: 7px;
+                height: fit-content;
+            }
+        }
+
+        &#links {
+
+            a {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: $dark;
+                    width: 10px;
+                    height: 2px;
+                    transform: translateY(-50%);
+                    top: 50%;
+                    left: -16px;
+                    transition: .2s opacity;
+                    opacity: 0;
+                }
+
+                &:hover::before {
+                    opacity: 1;
+                }
+            }
+
+            max-width: 400px;
+            width: 100%;
+        }
+    }
+
+    ul {
+        @include _flex;
+        height: 100%;
+
+        li {
+            margin-right: 30px;
+    
+            &:last-child {
+                margin: 0;
+            }
+        } 
     }
 }

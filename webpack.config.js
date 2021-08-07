@@ -11,8 +11,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
     ],
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.(js)$/,
                 use: ['babel-loader'],
                 exclude: /node_modules/,
@@ -20,9 +19,9 @@ module.exports = {
             {
                 test: /\.(s[ac]ss)$/,
                 use: [
-                    'style-loader', 
-                    'css-loader', 
-                    'sass-loader', 
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader',
                     'resolve-url-loader',
                 ],
             }

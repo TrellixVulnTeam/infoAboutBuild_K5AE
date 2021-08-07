@@ -1,2 +1,9 @@
 @import './topHead';
 @import './bottomHead';
+
+header {
+    background: url('../public/image/png/background.jpg') center no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}

@@ -9,7 +9,7 @@
     text-decoration: none;
     list-style: none;
     text-size-adjust: 100%;
-    color: $dark;
+    color: $white;
 }
 
 *::before,
@@ -37,7 +37,7 @@ button {
 }
 
 h1 {
-    font: 700 30px $fontFam;
+    font: 700 36px $fontFam;
     text-transform: uppercase;
 }
 
@@ -50,4 +50,8 @@ h3 {
 p,
 span {
     font: 500 15px $fontFam;
+}
+
+p {
+    line-height: 28px;
 }

@@ -1,4 +1,4 @@
-@import './common/global';
+@import './global';
 
 *,
 *::before,
@@ -9,7 +9,6 @@
     text-decoration: none;
     list-style: none;
     text-size-adjust: 100%;
-    color: $white;
 }
 
 *::before,
@@ -37,7 +36,7 @@ button {
 }
 
 h1 {
-    font: 700 36px $fontFam;
+    font: 700 26px $fontFam;
     text-transform: uppercase;
 }
 

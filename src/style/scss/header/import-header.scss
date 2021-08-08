@@ -1,9 +1,14 @@
 @import './topHead';
 @import './bottomHead';
+@import '../common/global';
 
 header {
     background: url('../public/image/png/background.jpg') center no-repeat;
     background-size: cover;
     width: 100vw;
     height: 100vh;
+    
+    & * {
+        color: $white;
+    }
 }

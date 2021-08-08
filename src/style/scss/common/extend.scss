@@ -1,2 +1,18 @@
 @import './global';
 
+%btnOpenPrg {
+    display: block;
+    background: $blue;
+    border: 1px solid #429FC6;
+    border-radius: 30px;
+    font: 700 14px $fontFam;
+    text-transform: uppercase;
+    transition: .2s box-shadow;
+    padding: 12px 18px;
+    letter-spacing: 1px;
+    color: $white;
+
+    &:hover {
+        box-shadow: 0px 4px 4px 0px rgba($color: $blue, $alpha: 0.4);
+    }
+}

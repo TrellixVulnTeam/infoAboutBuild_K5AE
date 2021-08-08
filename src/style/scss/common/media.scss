@@ -2,18 +2,34 @@
 @import './mixins';
 
 @media (min-width: $minSize-tabl) {
-    .topPanel {
-        nav,
-        a.logo {
-            display: block !important;
+    header {
+        a.openProg {
+            padding: 16px 20px !important;
         }
-    
-        .button {
-            display: none !important;
-        }
-    }
 
-    a.openProg {
-        padding: 16px 20px !important;
+        .topPanel {
+            nav,
+            a.logo {
+                display: block !important;
+            }
+
+            .button {
+                display: none !important;
+            }
+        }
+
+        .bottomPanel {
+            h1 {
+                font-size: 36px !important;
+            }
+
+            p {
+                font-size: 18px !important;
+            }
+
+            div.content {
+                max-width: 500px;
+            }
+        }
     }
 }

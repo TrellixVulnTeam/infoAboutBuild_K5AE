@@ -2,13 +2,14 @@
 @import '../common/extend';
 
 .bottomPanel {
-    @include _flex($justifyCont: center, $direction: column);
+    @include _flex(
+        $justifyCont: center, 
+        $direction: column, 
+        $padd: 20px 5%
+    );
     height: 100%;
 
     div.content {
-        padding: 20px 5%;
-        max-width: 630px;
-
         & > * {
             margin-bottom: 20px;
 
@@ -18,7 +19,7 @@
         }
 
         p {
-            font-size: 17px;
+            font-size: 15px;
         }
     }
 
@@ -30,7 +31,7 @@
     }
 
     a.openProg {
-        @include btnOpenPrg(12px 18px);
+        @extend %btnOpenPrg;
         width: fit-content;
     }
 }

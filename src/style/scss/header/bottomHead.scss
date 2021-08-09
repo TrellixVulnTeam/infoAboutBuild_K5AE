@@ -1,7 +1,7 @@
 @import '../common/global';
 @import '../common/extend';
 
-.bottomPanel {
+section#bottomPanel {
     @include _flex(
         $justifyCont: center, 
         $direction: column, 
@@ -20,6 +20,8 @@
 
         p {
             font-size: 15px;
+            line-height: 28px;
+            letter-spacing: 2px;
         }
     }
 

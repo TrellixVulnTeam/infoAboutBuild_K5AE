@@ -7,29 +7,53 @@
             padding: 16px 20px !important;
         }
 
-        .topPanel {
+        section#topPanel {
             nav,
             a.logo {
                 display: block !important;
             }
 
-            .button {
+            *.button {
                 display: none !important;
             }
         }
 
-        .bottomPanel {
+        section#bottomPanel {
             h1 {
                 font-size: 36px !important;
             }
 
             p {
-                font-size: 18px !important;
+                font-size: 17px !important;
             }
 
             div.content {
                 max-width: 500px;
             }
+        }
+    }
+
+    main {
+        section#description div.content {
+            &>*:nth-child(odd) {
+                flex-direction: row,
+            }
+
+            &>*:nth-child(even) {
+                flex-direction: row-reverse,
+            }
+
+            div.text {
+                width: $widthText;
+            }
+
+            div.image {
+                width: 100% - $widthText;
+            }
+        }
+
+        section#video {
+            // background: linear-gradient(78deg, #8130ff 0% 59%, #feb745 59% 100%);
         }
     }
 }

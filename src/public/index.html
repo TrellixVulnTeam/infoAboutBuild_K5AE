@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <section class="topPanel">
+        <section id="topPanel">
             <a href="#" class="logo">
                 <img src="./image/svg/logo.svg" alt="logo">
             </a>
@@ -51,7 +51,7 @@
                 </ul>
             </nav>
         </section>
-        <section class="bottomPanel">
+        <section id="bottomPanel">
             <div class="content">
                 <h1 class="title">Онлайн-Инструмент строительства</h1>
                 <span class="line"></span>
@@ -61,106 +61,119 @@
         </section>
     </header>
     <main>
-        <section class="description">
+        <section id="description">
+            <div class="wave">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+                </svg>
+            </div>
             <h2 class="title">Описание</h2>
             <div class="content">
                 <div>
-                    <p><b>Build Block</b> - это многофункциональный инструмент, который предоставляет вам большое
-                        количество фигур на выбор. </p>
-                    <p>Также у вас есть возможность посмотреть 3D модель, для полного понимания.</p>
-                    <p>Точный и качественный резулитат - это то, для чего был сделан Build Block.</p>
+                    <div class="text">
+                        <p><b>Build Block</b> - это многофункциональный инструмент, который предоставляет вам большое
+                            количество фигур на выбор. </p>
+                        <p>Также у вас есть возможность посмотреть 3D модель, для полного понимания.</p>
+                        <p>Точный и качественный резулитат - это то, для чего был сделан Build Block.</p>
+                    </div>
+                    <div class="image">
+                        <img src="./image/svg/gift.svg" alt="hands">
+                    </div>
                 </div>
                 <div>
-                    <img src="./image/svg/gift.svg" alt="hands">
-                </div>
-            </div>
-            <div class="content">
-                <div>
-                    <p>Наш сервис имеет много возможностей и плюсов, связанных с фигурами. </p>
-                    <div>
-                        <h3 class="title">Возможности:</h3>
-                        <ul>
-                            <li>
-                                <p>Постройка любых объектов, сделаные через фигуры;</p>
-                            </li>
-                            <li>
-                                <p>Точные данные об фигурах, которые можете использовать для дальнешей работы;</p>
-                            </li>
-                            <li>
-                                <p>Большое количество краски для обукрашивания фигур.</p>
-                            </li>
-                        </ul>
+                    <div class="text">
+                        <p>Наш сервис имеет много возможностей и плюсов, связанных с фигурами. </p>
+                        <div>
+                            <h3 class="title">Возможности:</h3>
+                            <ul>
+                                <li>
+                                    <p>Постройка любых объектов, сделаные через фигуры;</p>
+                                </li>
+                                <li>
+                                    <p>Точные данные об фигурах, которые можете использовать для дальнешей работы;</p>
+                                </li>
+                                <li>
+                                    <p>Большое количество краски для обукрашивания фигур.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img src="./image/svg/paint.svg" alt="paint">
                     </div>
                 </div>
             </div>
-            <div>
-                <img src="./image/svg/paint.svg" alt="paint">
-            </div>
         </section>
-        <video src=""></video>
+        <section id="video">
+            <span>foterecwds</span>
+            <video src=""></video>
+        </section>
     </main>
     <footer>
-        <div class="logo">
-            <img src="./image/svg/logo.svg" alt="logo">
-        </div>
-        <div id="inform">
-            <h3 class="title">Информация:</h3>
-            <nav>
+        <section id="footer">
+            <div class="logo">
+                <img src="./image/svg/logo.svg" alt="logo">
+            </div>
+            <div id="inform">
+                <h3 class="title">Информация:</h3>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">О фигурах</a>
+                        </li>
+                        <li>
+                            <a href="#">О сайте</a>
+                        </li>
+                        <li>
+                            <a href="#">Новости</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="help">
+                <h3 class="title">Помощь:</h3>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Управление</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="email">
+                <h3 class="title">Почта:</h3>
                 <ul>
                     <li>
-                        <a href="#">О фигурах</a>
+                        <span href="#">xxxxxxx@gmail.com</span>
                     </li>
                     <li>
-                        <a href="#">О сайте</a>
-                    </li>
-                    <li>
-                        <a href="#">Новости</a>
+                        <span href="#">xxxxxxx@bigmir.net</span>
                     </li>
                 </ul>
-            </nav>
-        </div>
-        <div id="help">
-            <h3 class="title">Помощь:</h3>
-            <nav>
+            </div>
+            <div id="socialNetwork">
+                <h3 class="title">Социальная сеть:</h3>
                 <ul>
-                    <li>
-                        <a href="#">Управление</a>
+                    <li id="facebook">
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li id="instagram">
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li id="twitter">
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
                     </li>
                 </ul>
-            </nav>
-        </div>
-        <div id="email">
-            <h3 class="title">Почта:</h3>
-            <ul>
-                <li>
-                    <span href="#">xxxxxxx@gmail.com</span>
-                </li>
-                <li>
-                    <span href="#">xxxxxxx@bigmir.net</span>
-                </li>
-            </ul>
-        </div>
-        <div id="socialNetwork">
-            <h3 class="title">Социальная сеть:</h3>
-            <ul>
-                <li id="facebook">
-                    <a href="#">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li id="instagram">
-                    <a href="#">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-                <li id="twitter">
-                    <a href="#">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <a href="#" class="openProg">Попробовать</a>
+            </div>
+            <a href="#" class="openProg">Попробовать</a>
+        </section>
     </footer>
 
     <script defer src="../../bundle.js" type="module"></script>

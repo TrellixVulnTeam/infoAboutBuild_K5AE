@@ -19,3 +19,8 @@
     width: $width;
     height: 2px;
 }
+
+@mixin _background($url: '', $direction: center) {
+    background: url($url) $direction no-repeat;
+    background-size: cover;
+}

@@ -2,13 +2,14 @@
 @import '../common/mixins';
 @import '../common/extend';
 
-section.topPanel {
+section#topPanel {
     position: fixed;
     background: transparent;
     @include _flex($alignItems: center, $padd: 20px 5%);
     width: inherit;
     top: 0;
     left: 0;
+    z-index: 998;
 
     & > * {
         margin: 0 2%;
@@ -50,13 +51,14 @@ section.topPanel {
 
             a {
                 position: relative;
+                font-weight: 700;
 
                 &::before {
                     content: '';
                     position: absolute;
                     background: $white;
                     width: 10px;
-                    height: 2px;
+                    height: 3px;
                     transform: translateY(-50%);
                     top: 50%;
                     left: -16px;

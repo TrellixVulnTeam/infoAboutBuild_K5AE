@@ -17,8 +17,27 @@
 }
 
 body {
+    // @include _background('../public/image/png/background.jpg');
+    // background-attachment: fixed;
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+
+    & > *:first-child section * {
+        color: $white;
+    }
+
+    & > *:last-child section * {
+        color: $dark;
+    }
+
+    & > *:nth-child(odd):not(header):not(footer) section:nth-child(even) {
+        color: $white;
+    }
+
+    & > *:nth-child(even):not(header):not(footer) section:nth-child(odd) {
+        color: $dark;
+    }
 }
 
 img {
@@ -36,21 +55,23 @@ button {
 }
 
 h1 {
-    font: 700 26px $fontFam;
+    font: 800 26px $fontFam;
     text-transform: uppercase;
 }
 
-a,
-h2,
+h2 {
+    font: 700 17px $fontFam;
+}
+
 h3 {
+    font: 700 15px $fontFam;
+}
+
+a {
     font: 600 15px $fontFam;
 }
 
 p,
 span {
     font: 500 15px $fontFam;
-}
-
-p {
-    line-height: 28px;
 }

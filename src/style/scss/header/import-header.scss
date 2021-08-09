@@ -1,14 +1,10 @@
 @import './topHead';
 @import './bottomHead';
 @import '../common/global';
+@import '../common/mixins';
 
 header {
-    background: url('../public/image/png/background.jpg') center no-repeat;
-    background-size: cover;
+    @include _background('../public/image/png/background.jpg');
     width: 100vw;
     height: 100vh;
-    
-    & * {
-        color: $white;
-    }
 }

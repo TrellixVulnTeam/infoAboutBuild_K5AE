@@ -1,5 +1,52 @@
 @import '../common/base';
+@import '../common/mixins';
 
-section.desciption {
-    
+section#description {
+    position: relative;
+    padding: 0 2%;
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        line-height: 23px;
+    }
+
+    div.wave {
+        position: absolute;
+        line-height: 0;
+        width: 100%;
+        height: $heightWave;
+        transform: rotate(180deg);
+        top: -($heightWave - 1);
+        left: 0;
+        overflow: hidden;
+
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 100%;
+        }
+
+        path.shape-fill {
+            fill: $white;
+        }
+    }
+
+    div.content {
+        & > * {
+            @include _flex($padd: 20px 3%, $direction: column);
+        }
+
+        div.image {
+            height: 100px;
+            margin: 0 4%;
+
+            img {
+                object-fit: contain;
+            }
+        }
+    }
 }

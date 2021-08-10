@@ -1,1 +1,6 @@
 @import './footer';
+@import '../common/global';
+
+footer {
+    background: $white;
+}

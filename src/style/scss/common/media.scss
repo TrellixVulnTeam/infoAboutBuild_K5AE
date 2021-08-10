@@ -53,9 +53,17 @@
                 width: 100% - $widthText;
             }
         }
+
+        section#video iframe {
+            height: 400px !important;
+        }
     }
 
-    section#video iframe {
-        height: 400px !important;
+    footer {
+        section#footer {
+            flex-direction: row;
+            width: 100%;
+            margin: 0;
+        }
     }
 }

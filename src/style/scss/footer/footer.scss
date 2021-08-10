@@ -2,6 +2,49 @@
 @import '../common/mixins';
 
 section#footer {
-    background: $white;
-    @include _flex($padd: 20px 5%);
+    @include _flex($padd: 20px 5%, $direction: column);
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: 0 auto;
+
+    &>* {
+        margin: 14px 2%;
+    }
+
+    nav ul li a {
+        position: relative;
+        padding-left: 16px;
+
+        &::before {
+            content: '';
+            @include _list($backCol: $dark);
+        }
+    }
+
+    ul li {
+        margin-top: 10px;
+    }
+
+    a.logo {
+        svg {
+            width: $sizeLogo;
+            height: fit-content;
+
+            g {
+                fill: $dark;
+            }
+        }
+    }
+
+    div#socialNetwork ul {
+        @include _flex($justifyCont: space-around);
+
+        a {
+            @include _btnSocialNetwork($size: 30px);
+        }
+    }
+
+    a.openProg {
+        @extend %btnOpenPrg;
+    }
 }

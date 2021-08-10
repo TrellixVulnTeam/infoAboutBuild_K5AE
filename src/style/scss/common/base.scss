@@ -23,14 +23,50 @@ body {
     height: 100vh;
     overflow-x: hidden;
 
-    & > *:first-child section *,
-    & > *:nth-child(odd):not(header):not(footer) section:nth-child(even) {
-        color: $white;
-    }
+    div#mainPage {
 
-    & > *:last-child section *,
-    & > *:nth-child(even):not(header):not(footer) section:nth-child(odd) {
-        color: $dark;
+        &>*:first-child section *,
+        &>*:nth-child(odd):not(header):not(footer) section:nth-child(even) {
+            @include _fill($white);
+        }
+
+        &>*:last-child section *,
+        &>*:nth-child(even):not(header):not(footer) section:nth-child(odd) {
+            @include _fill($dark);
+        }
+
+        section div.wave {
+            position: absolute;
+            line-height: 0;
+            width: 100%;
+            height: $heightWave;
+            transform: rotate(180deg);
+            left: 0;
+            overflow: hidden;
+
+            svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 100%;
+            }
+
+            path.shape-fill {
+                fill: $white;
+            }
+
+            &:first-child {
+                top: -($heightWave - 1);
+            }
+
+            &:last-child {
+                bottom: -($heightWave - 1);
+
+                svg {
+                    transform: rotateX(180deg) rotateY(180deg);
+                }
+            }
+        }
     }
 }
 

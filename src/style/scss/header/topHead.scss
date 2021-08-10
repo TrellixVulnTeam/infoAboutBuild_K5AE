@@ -17,7 +17,11 @@ section#topPanel {
 
     a.logo {
         display: none;
-        width: $sizeLogo;
+
+        svg {
+            width: $sizeLogo;
+            height: fit-content
+        }
     }
 
     a.openProg {
@@ -33,20 +37,8 @@ section#topPanel {
         display: none;
 
         &#socialNetwork a {
-            display: block;
-            box-shadow: 0px 0px 0px 2px rgba($color: $white, $alpha: 1);
-            border-radius: 50%;
-            transition: .2s transform;
-            width: $sizeSocNetwork;
-            padding: ($sizeSocNetwork / 4) 0;
-            font-size: 15px;
-            text-align: center;
-
-            &:hover {
-                transform: scale(1.1);
-            }
+            @include _btnSocialNetwork($size: 36px);
         }
-
 
         &#links {
             max-width: 400px;

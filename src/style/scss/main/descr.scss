@@ -20,40 +20,7 @@ section#description {
 
         &::before {
             content: '';
-            @include _list($backCol: $dark, $left: 6px);
-        }
-    }
-
-    div.wave {
-        position: absolute;
-        line-height: 0;
-        width: 100%;
-        height: $heightWave;
-        transform: rotate(180deg);
-        left: 0;
-        overflow: hidden;
-
-        svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 100%;
-        }
-
-        path.shape-fill {
-            fill: $white;
-        }
-    }
-
-    div.wave:first-child {
-        top: -($heightWave - 1);
-    }
-
-    div.wave:last-child {
-        bottom: -($heightWave - 1);
-
-        svg {
-            transform: rotateX(180deg) rotateY(180deg);
+            @include _list($backCol: $dark, $left: 10px);
         }
     }
 

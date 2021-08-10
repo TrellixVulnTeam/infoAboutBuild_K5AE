@@ -1,10 +1,7 @@
 @import './topHead';
 @import './bottomHead';
-@import '../common/global';
-@import '../common/mixins';
 
 header {
-    @include _background('../public/image/png/background.jpg');
     width: 100vw;
     height: 100vh;
 }

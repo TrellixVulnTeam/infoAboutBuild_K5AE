@@ -11,7 +11,7 @@ section#topPanel {
     left: 0;
     z-index: 998;
 
-    & > * {
+    &>* {
         margin: 0 2%;
     }
 
@@ -39,7 +39,7 @@ section#topPanel {
             transition: .2s transform;
             width: $sizeSocNetwork;
             padding: ($sizeSocNetwork / 4) 0;
-            font-size: 16px;
+            font-size: 15px;
             text-align: center;
 
             &:hover {
@@ -47,7 +47,10 @@ section#topPanel {
             }
         }
 
+
         &#links {
+            max-width: 400px;
+            width: 100%;
 
             a {
                 position: relative;
@@ -55,13 +58,7 @@ section#topPanel {
 
                 &::before {
                     content: '';
-                    position: absolute;
-                    background: $white;
-                    width: 10px;
-                    height: 3px;
-                    transform: translateY(-50%);
-                    top: 50%;
-                    left: -16px;
+                    @include _list($backCol: $white, $left: -16px);
                     transition: .2s opacity;
                     opacity: 0;
                 }
@@ -70,9 +67,6 @@ section#topPanel {
                     opacity: 1;
                 }
             }
-
-            max-width: 400px;
-            width: 100%;
         }
     }
 
@@ -82,10 +76,10 @@ section#topPanel {
 
         li {
             margin-right: 30px;
-    
+
             &:last-child {
                 margin: 0;
             }
-        } 
+        }
     }
 }

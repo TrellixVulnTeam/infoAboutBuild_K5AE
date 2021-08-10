@@ -3,14 +3,25 @@
 
 section#description {
     position: relative;
+    background: $white;
     padding: 0 2%;
-
-    h2 {
-        font-size: 22px;
-    }
 
     p {
         line-height: 23px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    ul li p {
+        position: relative;
+        padding-left: 25px;
+
+        &::before {
+            content: '';
+            @include _list($backCol: $dark, $left: 6px);
+        }
     }
 
     div.wave {
@@ -19,7 +30,6 @@ section#description {
         width: 100%;
         height: $heightWave;
         transform: rotate(180deg);
-        top: -($heightWave - 1);
         left: 0;
         overflow: hidden;
 
@@ -35,17 +45,45 @@ section#description {
         }
     }
 
+    div.wave:first-child {
+        top: -($heightWave - 1);
+    }
+
+    div.wave:last-child {
+        bottom: -($heightWave - 1);
+
+        svg {
+            transform: rotateX(180deg) rotateY(180deg);
+        }
+    }
+
     div.content {
+        margin-top: 20px;
+
         & > * {
-            @include _flex($padd: 20px 3%, $direction: column);
+            @include _flex($padd: 0 3%, $direction: column, $alignItems: center);
         }
 
         div.image {
             height: 100px;
-            margin: 0 4%;
+            margin: 30px 4%;
 
             img {
                 object-fit: contain;
+            }
+        }
+
+        div.text {
+            div {
+                ul li {
+                    margin: 6px 0;
+                }
+
+                margin-top: 10px;
+
+                p {
+                    font-weight: 600;
+                }
             }
         }
     }

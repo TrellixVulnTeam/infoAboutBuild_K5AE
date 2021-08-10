@@ -17,24 +17,18 @@
 }
 
 body {
-    // @include _background('../public/image/png/background.jpg');
-    // background-attachment: fixed;
+    @include _background('../public/image/png/background.jpg');
+    background-attachment: fixed;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
 
-    & > *:first-child section * {
-        color: $white;
-    }
-
-    & > *:last-child section * {
-        color: $dark;
-    }
-
+    & > *:first-child section *,
     & > *:nth-child(odd):not(header):not(footer) section:nth-child(even) {
         color: $white;
     }
 
+    & > *:last-child section *,
     & > *:nth-child(even):not(header):not(footer) section:nth-child(odd) {
         color: $dark;
     }
@@ -55,23 +49,23 @@ button {
 }
 
 h1 {
-    font: 800 26px $fontFam;
+    font: 800 $sizeH1 $fontFam;
     text-transform: uppercase;
 }
 
 h2 {
-    font: 700 17px $fontFam;
+    font: 700 $sizeH2 $fontFam;
 }
 
 h3 {
-    font: 700 15px $fontFam;
+    font: 700 $sizeH3 $fontFam;
 }
 
 a {
-    font: 600 15px $fontFam;
+    font: 600 $sizeLink $fontFam;
 }
 
 p,
 span {
-    font: 500 15px $fontFam;
+    font: 500 $sizeText $fontFam;
 }

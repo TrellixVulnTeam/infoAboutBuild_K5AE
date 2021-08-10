@@ -1,0 +1,7 @@
+@import '../common/global';
+@import '../common/mixins';
+
+section#footer {
+    background: $white;
+    @include _flex($padd: 20px 5%);
+}

@@ -23,18 +23,20 @@
                 font-size: 36px !important;
             }
 
-            p {
-                font-size: 17px !important;
-            }
-
             div.content {
                 max-width: 500px;
+            }
+
+            a.openProg {
+                display: block;
             }
         }
     }
 
     main {
         section#description div.content {
+            margin: 0;
+
             &>*:nth-child(odd) {
                 flex-direction: row,
             }
@@ -51,9 +53,9 @@
                 width: 100% - $widthText;
             }
         }
+    }
 
-        section#video {
-            // background: linear-gradient(78deg, #8130ff 0% 59%, #feb745 59% 100%);
-        }
+    section#video iframe {
+        height: 400px !important;
     }
 }

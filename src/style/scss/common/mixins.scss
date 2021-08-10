@@ -24,3 +24,13 @@
     background: url($url) $direction no-repeat;
     background-size: cover;
 }
+
+@mixin _list($backCol: '', $left: 0) {
+    position: absolute;
+    background: $backCol;
+    width: 10px;
+    height: 2px;
+    transform: translateY(-50%);
+    top: 50%;
+    left: $left;
+}

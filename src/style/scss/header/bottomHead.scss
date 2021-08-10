@@ -4,8 +4,8 @@
 section#bottomPanel {
     @include _flex(
         $justifyCont: center, 
-        $direction: column, 
-        $padd: 20px 5%
+        $direction: column,
+        $padd: 20px 5%,
     );
     height: 100%;
 
@@ -19,8 +19,8 @@ section#bottomPanel {
         }
 
         p {
-            font-size: 15px;
-            line-height: 28px;
+            font-size: 12px;
+            line-height: 26px;
             letter-spacing: 2px;
         }
     }
@@ -33,6 +33,7 @@ section#bottomPanel {
     }
 
     a.openProg {
+        display: none;
         @extend %btnOpenPrg;
         width: fit-content;
     }

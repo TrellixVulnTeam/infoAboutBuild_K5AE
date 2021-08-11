@@ -1,0 +1,1 @@
+export default (() => window.addEventListener('scroll', () => document.getElementById('topPanel').style.background = (window.pageYOffset != 0 ? '#4e02d1' : '#0000')))

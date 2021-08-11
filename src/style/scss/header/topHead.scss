@@ -4,8 +4,8 @@
 
 section#topPanel {
     position: fixed;
-    background: transparent;
     @include _flex($alignItems: center, $padd: 20px 5%);
+    transition: .2s background;
     width: inherit;
     top: 0;
     left: 0;

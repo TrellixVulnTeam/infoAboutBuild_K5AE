@@ -20,7 +20,7 @@ section#description {
 
         &::before {
             content: '';
-            @include _list($backCol: $dark, $left: 10px);
+            @include _list($left: 10px);
         }
     }
 

@@ -17,7 +17,7 @@ section#footer {
 
         &::before {
             content: '';
-            @include _list($backCol: $dark);
+            @include _list;
         }
     }
 

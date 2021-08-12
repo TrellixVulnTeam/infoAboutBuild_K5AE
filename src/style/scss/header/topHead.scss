@@ -29,8 +29,10 @@ section#topPanel {
     }
 
     button.menu {
-        width: $sizeBtnMenu;
-        height: $sizeBtnMenu;
+        svg {
+            width: $sizeBtnMenu;
+            height: $sizeBtnMenu;
+        }
     }
 
     nav {
@@ -50,7 +52,7 @@ section#topPanel {
 
                 &::before {
                     content: '';
-                    @include _list($backCol: $white, $left: -16px);
+                    @include _list($left: -16px);
                     transition: .2s opacity;
                     opacity: 0;
                 }

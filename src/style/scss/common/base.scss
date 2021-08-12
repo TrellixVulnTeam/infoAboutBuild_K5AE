@@ -27,12 +27,30 @@ body {
 
         &>*:first-child section *,
         &>*:nth-child(odd):not(header):not(footer) section:nth-child(even) {
-            @include _fill($white);
+
+            h1,
+            h2,
+            h3,
+            p,
+            span,
+            a,
+            svg {
+                @include _fill($white);
+            }
         }
 
         &>*:last-child section *,
         &>*:nth-child(even):not(header):not(footer) section:nth-child(odd) {
-            @include _fill($dark);
+
+            h1,
+            h2,
+            h3,
+            p,
+            span,
+            a,
+            svg {
+                @include _fill($dark);
+            }
         }
 
         section div.wave {
@@ -79,6 +97,7 @@ img {
 }
 
 button {
+    display: block;
     background: none;
     border: none;
     cursor: pointer;
